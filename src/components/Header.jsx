@@ -1,7 +1,5 @@
-import React from "react"
 
-const Header = () => {
-    return (
+const Header = () => (
         <header className="header">
             <img 
                 src="https://freesvg.org/img/Troll-Face.png" 
@@ -11,6 +9,5 @@ const Header = () => {
             <h4 className="header--project">EZZAHIR Taha - Meme Generator</h4>
         </header>
     )
-}
 
 export default Header

@@ -1,11 +1,15 @@
 import React from "react"
 
-export default function Meme() {
+const Meme = () => {
+
+
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
         randomImage: "http://i.imgflip.com/1bij.jpg" 
     })
+
+
     const [allMemes, setAllMemes] = React.useState([])
     
     
@@ -18,7 +22,7 @@ export default function Meme() {
         getMemes()
     }, [])
     
-    function getMemeImage() {
+    const getMemeImage = () => {
         const randomNumber = Math.floor(Math.random() * allMemes.length)
         const url = allMemes[randomNumber].url
         setMeme(prevMeme => ({
@@ -27,7 +31,7 @@ export default function Meme() {
         }))
     }
     
-    function handleChange(event) {
+    const handleChange = (event)  => {
         const {name, value} = event.target
         setMeme(prevMeme => ({
             ...prevMeme,
@@ -69,3 +73,5 @@ export default function Meme() {
         </main>
     )
 }
+
+export default Meme;
